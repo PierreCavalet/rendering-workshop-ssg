@@ -2,15 +2,11 @@
   <div>
     <h1>Pokemon list</h1>
     <ul>
-      <NuxtLink
-        v-for="pokemon in pokemons"
-        :key="pokemon.id"
-        :to="`/pokemon/${pokemon.id}`"
-      >
-        <li>
-          {{ pokemon.name.french }}
-        </li>
-      </NuxtLink>
+      <li v-for="pokemon in pokemons" :key="pokemon.id">
+        <NuxtLink :to="`/pokemon/${pokemon.id}`">
+          {{ pokemon.name.english }}
+        </NuxtLink>
+      </li>
     </ul>
   </div>
 </template>
